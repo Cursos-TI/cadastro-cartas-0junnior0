@@ -18,6 +18,8 @@ float PIB , PIB2;
 int turistico, turistico2;
 float percapta, percapta2;
 float densidade , densidade2;
+float superpoder, superpoder2;
+int resultadoPopulacao, resultadoArea, resultadoPIB, resultadoTuristico, resultadoPercapta , resultadoDensidade , resultadoSuperPoder;
 
   // Área para entrada de dados
 
@@ -57,7 +59,9 @@ percapta = (float) PIB / populacao;
 
 densidade = (float) populacao / area;
 
-// Agora sobre a carta 2 atualizada
+superpoder = populacao + area + PIB + percapta + (1/densidade) + turistico;
+
+// Agora sobre a carta 2
 
 printf("Referente a carta 2, Digite o nome do Estado: \n");
 
@@ -91,6 +95,8 @@ percapta2 = (float) PIB2 / populacao2;
 
 densidade2 = (float) populacao2 / area2;
 
+superpoder2 = populacao2 + area2 + PIB2 + percapta2 + (1/densidade2) + turistico2;
+
   // Área para exibição dos dados da cidade
 
   
@@ -114,6 +120,8 @@ printf("Renda percapta: %.2f \n", percapta);
 
 printf("Densidade populacional: %.2f \n", densidade);
 
+printf("Super poder: %.2f\n",superpoder);
+
 printf("\n\nCarta 2 \n \n");
 
 printf("Estado: %s\n", estado2);
@@ -134,8 +142,37 @@ printf("Renda percapta: %.2f \n", percapta2);
 
 printf("Densidade populacional: %.2f \n", densidade2);
 
+printf("Super poder: %.2f \n",superpoder2);
+
+
+
+// comparação
+
+resultadoPopulacao = populacao > populacao2;
+resultadoArea = area > area2;
+resultadoPIB = PIB > PIB2;
+resultadoTuristico =  turistico > turistico2;
+resultadoPercapta = percapta > percapta2;
+resultadoDensidade = densidade > densidade2;
+resultadoSuperPoder = superpoder > superpoder2;
+
+printf ("O resultado de população é %d \n", resultadoPopulacao );
+
+printf ("O resultado de area é %d \n", resultadoArea );
+
+printf ("O resultado de PIB é %d \n", resultadoPIB );
+
+printf ("O resultado de pontos turisticos é %d \n", resultadoTuristico );
+
+printf ("O resultado de renda percapta é %d \n", resultadoPercapta );
+
+printf ("O resultado de densidade é %d \n", resultadoDensidade );
+
+printf ("O resultado de super poder é %d \n", resultadoSuperPoder );
+
+
+
 
 return 0;
 
 }
-
