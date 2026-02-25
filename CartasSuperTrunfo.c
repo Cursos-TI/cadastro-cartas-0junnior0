@@ -57,7 +57,7 @@ percapta = (float) PIB / populacao;
 
 densidade = (float) populacao / area;
 
-// Agora sobre a carta 2
+// Agora sobre a carta 2 atualizada
 
 printf("Referente a carta 2, Digite o nome do Estado: \n");
 
