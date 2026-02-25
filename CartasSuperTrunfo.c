@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
@@ -17,6 +16,8 @@ int populacao, populacao2;
 float area, area2;
 float PIB , PIB2;
 int turistico, turistico2;
+float percapta, percapta2;
+float densidade , densidade2;
 
   // Área para entrada de dados
 
@@ -52,6 +53,9 @@ printf("Referente a carta 1, Digite quantos pontos turísticos tem na cidade: \n
 
 scanf("%d", &turistico);
 
+percapta = (float) PIB / populacao;
+
+densidade = (float) populacao / area;
 
 // Agora sobre a carta 2
 
@@ -83,6 +87,9 @@ printf("Referente a carta 2, Digite quantos pontos turísticos tem na cidade: \n
 
 scanf("%d", &turistico2);
 
+percapta2 = (float) PIB2 / populacao2;
+
+densidade2 = (float) populacao2 / area2;
 
   // Área para exibição dos dados da cidade
 
@@ -103,6 +110,10 @@ printf("PIB: %f\n", PIB);
 
 printf("PontoTuristico: %d\n", turistico);
 
+printf("Renda percapta: %.2f \n", percapta);
+
+printf("Densidade populacional: %.2f \n", densidade);
+
 printf("\n\nCarta 2 \n \n");
 
 printf("Estado: %s\n", estado2);
@@ -119,9 +130,12 @@ printf("PIB: %f\n", PIB2);
 
 printf("PontoTuristico: %d\n", turistico2);
 
+printf("Renda percapta: %.2f \n", percapta2);
+
+printf("Densidade populacional: %.2f \n", densidade2);
+
 
 return 0;
 
 }
-
 
